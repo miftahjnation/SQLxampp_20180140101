@@ -80,6 +80,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
                                 Intent inten = new Intent(view.getContext(), EditTeman.class);
                                 inten.putExtras(bendel);
                                 view.getContext().startActivity(inten);
+                                break;
                             case R.id.hapus:
                                 AlertDialog.Builder alertdb = new AlertDialog.Builder(view.getContext());
                                 alertdb.setTitle("Yakin "+nm+" akan dihapus?");
@@ -117,7 +118,7 @@ public class TemanAdapter extends RecyclerView.Adapter<TemanAdapter.TemanViewHol
 
     private void HapusData(final String idx)
     {
-        String url_delete = "http://192.168.179.72/umyTI/deletetmn.php";
+        String url_delete = "https://20180140101.praktikumtiumy.com/deletetmn.php";
         final String TAG = MainActivity.class.getSimpleName();
         final String TAG_SUCCES = "success";
         final int[] sukses = new int[1];
